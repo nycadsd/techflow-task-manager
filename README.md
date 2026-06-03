@@ -41,3 +41,11 @@ docs/ → Documentação do projeto
 ## Autor
 
 Projeto desenvolvido para fins acadêmicos.
+
+## Gestão de Mudanças
+
+Durante o desenvolvimento do projeto foi identificada a necessidade de incluir o controle de status das tarefas.
+
+Inicialmente o sistema permitia apenas cadastrar, listar, editar e excluir tarefas. Após uma análise do fluxo de trabalho de equipes ágeis, foi definido que cada tarefa deveria possuir um status para facilitar o acompanhamento das atividades.
+
+A funcionalidade adicionada permite que novas tarefas sejam criadas com o status inicial "Pendente", tornando o sistema mais aderente às necessidades de gerenciamento de projetos e demonstrando a capacidade de adaptação às mudanças de escopo, conforme os princípios das metodologias ágeis.
