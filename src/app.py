@@ -19,7 +19,8 @@ def criar_tarefa():
 
     tarefa = {
         "id": proximo_id,
-        "titulo": dados["titulo"]
+        "titulo": dados["titulo"],
+        "status": "Pendente"
     }
 
     tarefas.append(tarefa)
