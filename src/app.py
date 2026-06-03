@@ -36,6 +36,26 @@ def listar_tarefas():
 
     return jsonify(tarefas)
 
+@app.route("/tarefas/<int:id>", methods=["PUT"])
+def editar_tarefa(id):
+
+    dados = request.get_json()
+
+    for tarefa in tarefas:
+
+        if tarefa["id"] == id:
+
+            tarefa["titulo"] = dados["titulo"]
+
+            return jsonify({
+                "mensagem": "Tarefa atualizada com sucesso",
+                "tarefa": tarefa
+            })
+
+    return jsonify({
+        "erro": "Tarefa não encontrada"
+    }), 404
+
 
 if __name__ == "__main__":
     app.run(debug=True)
