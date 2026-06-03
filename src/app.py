@@ -56,6 +56,22 @@ def editar_tarefa(id):
         "erro": "Tarefa não encontrada"
     }), 404
 
+@app.route("/tarefas/<int:id>", methods=["DELETE"])
+def excluir_tarefa(id):
+
+    for tarefa in tarefas:
+
+        if tarefa["id"] == id:
+
+            tarefas.remove(tarefa)
+
+            return jsonify({
+                "mensagem": "Tarefa removida com sucesso"
+            })
+
+    return jsonify({
+        "erro": "Tarefa não encontrada"
+    }), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
